@@ -1,25 +1,54 @@
-Project Title: Dice Rolling Game
-A simple console application that simulates rolling a pair of dice.
+# Dice Rolling Game 🎲
 
-Project Description
-This project was developed as part of a python curriculum to practice core programming concepts.
-The application generates two random numbers between 1 and 6, displays the results, and aloows the user to repeat the roll.
+A simple command-line game written in Python that simulates the rolling of two standard six-sided dice. The game allows the user to roll the dice repeatedly until they choose to stop.
 
-Key Features and Concepts Learned
-Random Number Generation: Used Python's built-in random module to simulate dice rolls.
-User Input and Control Flow: Implemented a loop that continues rolling the dice until the user explicitly chooses to quit.
-Functions and Modules: Organized the code into functions for rolling the dice and handling the main game loop.
-Basic Console Output: Used print() statements for clean display of the dice results.
+---
 
-How to Run the Project
-These instructions assume the user hasa Python installed and the repository cloned.
+## 🚀 Getting Started
 
-Clone the Repository:
-git clone https://github.com/AHG03/python-dice-game.git
-cd python-dice-game
+### Prerequisites
 
-Run the Script:
-python dice.py
+You'll need **Python 3** installed on your system to run this game.
 
-Follow the Prompts:
-The program will prompt you to press a key to roll the dice and ask if you want to roll again.
+### How to Run
+
+1.  **Clone the repository** to your local machine:
+
+    ```bash
+    git clone [https://github.com/YourUsername/dice-rolling-game.git](https://github.com/YourUsername/dice-rolling-game.git)
+    ```
+
+2.  Navigate to the project directory:
+
+    ```bash
+    cd dice-rolling-game
+    ```
+
+3.  Run the script using the Python interpreter:
+
+    ```bash
+    python dice.py
+    ```
+
+---
+
+## 🎮 How to Play
+
+The game runs in a continuous loop, prompting you before each roll.
+
+1.  When prompted **"Roll the dice? (y/n):"**:
+    * Enter **`y`** (or just press **Enter**) to roll the two dice. The results (e.g., "Dice 1: 3, Dice 2: 5") will be displayed.
+    * Enter **`n`** to stop the game. The program will print **"Thanks for playing!"** and exit.
+    * If you enter anything else, the program will print **"invalid choice!"** and prompt you again.
+
+---
+
+## 💻 Code Overview
+
+The script is contained in a single file, `dice.py`, and utilizes the following key Python features:
+
+* **import random**: Necessary for generating random numbers to simulate the dice rolls.
+* **while True:**: Creates the main game loop that continues until the user explicitly enters **`n`**.
+* **random.randint(1, 6)**: Generates a random integer between 1 and 6 (inclusive) for each of the two dice.
+* **Input Handling**: The input is normalized using `.lower().strip()` to handle variations in user input (e.g., 'Y ', 'y').
+* **Conditional Logic**: The `if/elif/else` block checks the user's input (`choice`) to determine whether to roll the dice, quit the game, or notify the user of an invalid entry.
